@@ -15,3 +15,5 @@ class Pessoa:
         self.idade += 1
 p1 = Pessoa(15, "Maria Clara")
 print(p1)
+p2 = Pessoa(23, "Laura")
+print(p2)
