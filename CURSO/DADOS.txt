@@ -1,0 +1,7 @@
+João : 28 : Masc : Solteiro : 151.454.235.25
+Camila : 23 : Femin : Casada : 156.453.215.45
+João : 19 : Masc : Namorando : 171.453.235.15
+Paulo : 27 : Masc : Solteiro : 152.457.235.55
+Yasmim : 22 : Femin : Casada : 154.452.235.20
+Livia : 18 : Femin : Solteira : 151.154.225.31	
+	
