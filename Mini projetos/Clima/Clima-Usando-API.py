@@ -31,20 +31,26 @@ def Inicio():
         regiao = dados_requisao_forecast['location']['region']
         cidade = dados_requisao_forecast['location']['name']
         pais = dados_requisao_forecast['location']['country']
-        print(f"""
-    Temperatura: {temperatura}
-    Sensação Térmica: {sensacao_termica}
-    Maxima do Dia: {temperatura_maxima}
-    Minima do Dia: {temperatura_minima}
-    Velocidade do Vento: {velocidade_vento}
-    Umidade: {umidade}%
-    Chance de Chover: {chance_de_chover}%
-    Hora Local: {hora_local[11:16]}
-    País: {pais}
-    Cidade: {cidade}
-    Região: {regiao}
-    Descrição: {descricao}
+        sunrise = dados_requisao_forecast["forecast"]["forecastday"][0]["astro"]["sunrise"]
+        sunset = dados_requisao_forecast["forecast"]["forecastday"][0]["astro"]["sunset"]
 
+
+
+        print(f"""
+🌡️ Temperatura: {temperatura}°C
+🥵 Sensação Térmica: {sensacao_termica}°C
+⬆️ Máxima: {temperatura_maxima}°C
+⬇️ Mínima: {temperatura_minima}°C
+💨 Vento: {velocidade_vento} km/h
+💧 Umidade: {umidade}%
+🌧️ Chance de chuva: {chance_de_chover}%
+🕒 Hora Local: {hora_local[11:16]}
+🌅 Nascer do Sol: {sunrise}
+🌇 Pôr do Sol: {sunset}
+🌍 País: {pais}
+🏙️ Cidade: {cidade}
+📍 Região: {regiao}
+☁️  Descrição: {descricao}
 """)
     else:
         print("Erro")
@@ -56,4 +62,5 @@ def teste():
     resposta_forecast = requests.get(link_api_forecast,params=parametros)
     dados_requisao_forecast = resposta_forecast.json()
     pprint.pprint(dados_requisao_forecast)
+#teste()
 Inicio()
