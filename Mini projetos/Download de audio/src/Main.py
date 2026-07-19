@@ -1,5 +1,5 @@
 from downloader import Downloader
-
+from audio_extractor import AudioExtractor
 
 
 def main():
@@ -14,7 +14,9 @@ def main():
 
     video_path = downloader.download(url)
 
- 
+    audio_extrator = AudioExtractor()
+
+    audio_path = audio_extrator.extract()
 
     print("\nVídeo:")
     print(video_path)
