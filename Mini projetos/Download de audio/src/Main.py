@@ -1,6 +1,6 @@
 from downloader import Downloader
 from audio_extractor import AudioExtractor
-
+import os
 
 def main():
 
@@ -16,12 +16,12 @@ def main():
 
     audio_extrator = AudioExtractor()
 
-    audio_path = audio_extrator.extract()
+    audio_path = audio_extrator.extract(video_path)
 
-    print("\nVídeo:")
-    print(video_path)
-
-
+    
+    print(f"Áudio: {audio_path}")
+    
+    os.remove(video_path)
 
 
 if __name__ == "__main__":
